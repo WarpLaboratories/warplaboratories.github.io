@@ -1,0 +1,29 @@
+<section id="posts" class="bg-grey-blue">
+	<h2 class="center-align">OUR BLOG</h2>
+	<div class="container">
+		{% for post in site.posts limit:site.tiles-count %}{% if site.tiles-source == 'posts' %}
+		{% assign loopindex = forloop.index0 | modulo: 2 %}
+		<div class="card horizontal bg-blue-3">
+			<!-- <div class="card-image">
+				{% if loopindex == 0 %}
+					{% if post.image %}
+					<img  class="responsive-img" src="{{ "" | absolute_url }}/images/posts/{{ post.image }}" alt="" />
+					{% endif %}
+				{% endif %}
+			</div> -->
+			<div class="card-stacked">
+				<div class="card-content">
+				<div class="center-align">
+					<h2><a href="{{ post.url | relative_url }}" class="link">{{ post.title }}</a></h2>
+					<p>{{ post.description }}</p>
+				</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}{% endfor %}
+
+		<div class="center-align top-bottom-padding">
+			<a href="/blog.html" class="button">Check Out More Here</a>
+		</div>
+	</div>
+</section>

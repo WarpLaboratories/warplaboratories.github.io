@@ -1,0 +1,26 @@
+---
+layout: page
+title: Blog
+description: Random Thoughts of a Techie Nature ;)
+---
+
+  {% for post in site.posts limit:site.tiles-count %}{% if site.tiles-source == 'posts' %}
+  {% assign loopindex = forloop.index0 | modulo: 2 %}
+  <div class="card horizontal bg-grey-blue">
+    <!-- <div class="card-image">
+      {% if loopindex == 0 %}
+        {% if post.image %}
+        <img  class="responsive-img" src="{{ "" | absolute_url }}/images/posts/{{ post.image }}" alt="" />
+        {% endif %}
+      {% endif %}
+    </div> -->
+    <div class="card-stacked">
+      <div class="card-content">
+      <div class="center-align white-text">
+        <h2><a href="{{ post.url | relative_url }}" class="link white-text">{{ post.title }}</a></h2>
+        <p>{{ post.description }}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}{% endfor %}
