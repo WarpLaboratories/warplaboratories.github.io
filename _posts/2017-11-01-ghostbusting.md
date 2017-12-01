@@ -12,10 +12,10 @@ This past halloween, the warplabs team decided to go ghost bustin' for halloween
 <div class="container">
 	<div class="row">
 		<div class="col m5 s12">
-			<img class="responsive-img" src="/images/posts/ghostbusters1.png"/>
+			<img class="responsive-img" src="/images/posts/ghostbusters1.jpg"/>
 		</div>
 		<div class="col m5 offset-m1 s12">
-			<img class="responsive-img" src="/images/posts/ghostbusters2.png"/>
+			<img class="responsive-img" src="/images/posts/ghostbusters2.jpg"/>
 		</div>
 	</div>
 </div>
